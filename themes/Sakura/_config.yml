@@ -88,7 +88,7 @@ msocial:
 donate:
   paypal: https://yechengxin.github.io/donate/
   alipay: /img/custom/donate/AliPayQR.jpg
-  wechat: /img/custom/donate/WeChanQR.jpg
+  wechat: /img/custom/donate/WeChanQR.png
   wechatSQ: https://yechengxin.github.io/donate/
 
 # 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
