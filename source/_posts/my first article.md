@@ -24,5 +24,5 @@ hello world
 $ hello world
 ```
 
-More info: [hello world](https://yechengxin.github.io)
+More info: [hello world](https://yechengxin.github.io/images/donate/AliPayQR.jpg)
 
