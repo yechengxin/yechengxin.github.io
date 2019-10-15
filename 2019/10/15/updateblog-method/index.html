@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">ycx</title>
+  <title itemprop="name">换电脑后如何更新blog | ycx</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -387,6 +387,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1570792027193&amp;di=4c023dc216d41d558ab7617a3dd8455b&amp;imgtype=0&amp;src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F52c8218bfad13dd5111221035080f1761dd3625a.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1570792027193&amp;di=4c023dc216d41d558ab7617a3dd8455b&amp;imgtype=0&amp;src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F52c8218bfad13dd5111221035080f1761dd3625a.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      换电脑后如何更新blog</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">ycx</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-10-15<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
@@ -394,15 +418,50 @@
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
-          <header class="entry-header">
-            <h1 class="entry-title"></h1>
-            <p class="entry-census">&nbsp;·&nbsp;2019-10-15&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
-
-            <hr>
-          </header>
-        
         <div class="entry-content">
-          
+          <p>更新博客的具体操</p>
+<h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><h3 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h3><p><a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">下载地址</a><br>安装步骤：双击下载好的exe文件，一直next就好。<br>安装好后，打开gitbash，查看版本：</p>
+<pre><code class="bash">$ git version
+</code></pre>
+<p><img src="https://yechengxin.github.io/images/donate/gitversion.png" alt></p>
+<h3 id="2-安装NodeJs"><a href="#2-安装NodeJs" class="headerlink" title="2.安装NodeJs"></a>2.安装NodeJs</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a>(说明：LTS为长期支持版，Current为当前最新版)<br>安装步骤：下载好msi文件后，双击打开安装，一路next，在Custom Setup这一步选 Add to PATH ,这样就需要自己去配置电脑上环境变量了。<br>安装好后，打开gitbash，查看版本：</p>
+<pre><code class="bash">$ node -v
+</code></pre>
+<p><img src="https://yechengxin.github.io/images/donate/node-v.png" alt></p>
+<h3 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h3><p>创建一个文件夹(用于存放blog的所有文件)，然后在该文件夹下gitbash。<br>安装hexo命令：</p>
+<pre><code class="bash">$ npm install -g hexo-cli
+</code></pre>
+<p>查看版本：</p>
+<pre><code class="bash">$ hexo -v
+</code></pre>
+<p><img src="https://yechengxin.github.io/images/donate/hexo-v.png" alt></p>
+<h3 id="4-github添加ssh-key"><a href="#4-github添加ssh-key" class="headerlink" title="4.github添加ssh key"></a>4.github添加ssh key</h3><p>检查本地是否有 SSH key</p>
+<pre><code class="bash">$ cd ~/.ssh
+$ ls
+</code></pre>
+<p>第一个命令是进入 .ssh 文件夹，第二个是显示 .ssh 文件下的文件夹及文件。<br>如果 SSH key 存在，就会显示 id_rsa、id_rsa.pub、know_hosts 三个文件 。<br><img src="https://yechengxin.github.io/images/donate/sshkey-ls.webp" alt></p>
+<p>没有就新建一个<br>设置user.name和user.email配置信息:</p>
+<pre><code class="bash">$ git config --global user.name &quot;你的GitHub用户名&quot;
+$ git config --global user.email &quot;你的GitHub注册邮箱&quot;
+</code></pre>
+<p>生成ssh密钥文件：</p>
+<pre><code class="bash">$ ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;
+</code></pre>
+<p>然后三个回车<br>现在找到.ssh的文件夹(通常在C:\Users\Administrator.ssh)中的id_rsa.pub密钥，将内容全部复制<br>点击github头像–&gt;settings<br><img src="https://yechengxin.github.io/images/donate/settings.png" alt><br>ssh and gpg keys –&gt; new ssh key,title随便取，key就粘贴刚才复制的<br>输入命令测试：</p>
+<pre><code class="bash">$ ssh -T git@github.com
+</code></pre>
+<p><img src="https://yechengxin.github.io/images/donate/ssh-t.png" alt><br>成功！</p>
+<h3 id="5-克隆仓库代码"><a href="#5-克隆仓库代码" class="headerlink" title="5.克隆仓库代码"></a>5.克隆仓库代码</h3><p>在blog文件夹中gitbash，输入克隆命令:</p>
+<pre><code class="bash">$ git clone -b hexo xxx
+</code></pre>
+<p>(克隆一个hexo分支到文件夹中，xxx为仓库地址)</p>
+<h3 id="6-提交代码"><a href="#6-提交代码" class="headerlink" title="6.提交代码"></a>6.提交代码</h3><p>在blog文件夹中gitbash，输入命令:</p>
+<pre><code class="bash">$ git add --all   提交未跟踪、修改和删除文件到暂存区
+$ git commit -m &#39;注释&#39;   将暂存区里的改动给提交到本地的版本库
+$ git push -u origin 分支名   将本地的分支推送到origin主机，同时指定origin为默认主机   
+</code></pre>
+<p>More info: <a href="https://git-scm.com/docs" target="_blank" rel="noopener">git命令</a></p>
+
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
@@ -482,16 +541,16 @@
 
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <a href="" class="profile gravatar"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" itemprop="image" alt="ycx" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="" itemprop="url" rel="author"></a>
+            <a href="" itemprop="url" rel="author">ycx</a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i></p>
+        <p><i class="iconfont icon-write"></i>一个好学的人</p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->
